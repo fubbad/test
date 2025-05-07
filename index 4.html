@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der Weiße Ring – Schulprojekt von Sophia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom, #ffdc00 0%, #ffffff 100%);
+      color: #333;
+    }
+    header, footer {
+      background: #ff7f00;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+    nav {
+      background-color: #fff200;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      background: #00a0e3;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #007bb5;
+    }
+    .section {
+      padding: 30px 20px;
+      max-width: 960px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .section h3 {
+      font-size: 2rem;
+      color: #ff7f00;
+    }
+    .section img {
+      width: 100%;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+    .bericht {
+      background-color: #fff8dc;
+      border-left: 6px solid #ff7f00;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+    .donate-button, .download-button, button {
+      display: block;
+      background-color: #00a0e3;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px auto;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+    .donate-button:hover, .download-button:hover, button:hover {
+      background-color: #007bb5;
+    }
+    #certificate {
+      display: none;
+      text-align: center;
+      background-color: #d9ffd9;
+      border: 2px dashed #4CAF50;
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(15deg); }
+      100% { transform: rotate(-10deg); }
+    }
+  </style>
+  <script>
+    function checkQuiz() {
+      const answers = ["b", "a", "c"];
+      let correct = 0;
+      answers.forEach((ans, i) => {
+        if (document.querySelector(`input[name=q${i + 1}]:checked`)?.value === ans) {
+          correct++;
+        }
+      });
+      alert(`Du hast ${correct} von ${answers.length} Fragen richtig!`);
+      document.getElementById("certificate").style.display = (correct === answers.length) ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Sophias Schulprojekt: Der Weiße Ring</h1>
+  </header>
+  <nav>
+    <a href="#ueber">Über den Weißen Ring</a>
+    <a href="#berichte">Berichte</a>
+    <a href="#uebermich">Über mich</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#spenden">Spenden</a>
+  </nav>
+
+  <section id="ueber" class="section">
+    <h3>Was ist der Weiße Ring?</h3>
+    <p>Der WEISSE RING hilft Menschen, die Opfer von Verbrechen wurden – zum Beispiel nach einem Diebstahl, einer Körperverletzung oder häuslicher Gewalt. Die Organisation bietet Gespräche, finanzielle Hilfe, Begleitung zu Polizei und Gericht sowie Beratung an. Sie finanziert sich durch Spenden.</p>
+    <img src="https://www.weisser-ring.de/sites/default/files/styles/media_crop/public/2023-03/beratung_telefonisch.jpg" alt="Telefonische Beratung">
+    <img src="https://www.weisser-ring.de/sites/default/files/styles/media_crop/public/2022-01/wr_header_logo_2022.jpg" alt="Logo Weißer Ring">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Knh5fijzMO0" title="Video über den Weißen Ring" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="berichte" class="section">
+    <h3>Berichte von Betroffenen</h3>
+    <div class="bericht">
+      <p><strong>„Ich wurde auf dem Nachhauseweg überfallen...“</strong> Der Weiße Ring hat mir geholfen, wieder Vertrauen in den Alltag zu finden. Ich konnte mit jemandem reden, der mich verstanden hat. – <em>Anna, 14</em></p>
+    </div>
+    <div class="bericht">
+      <p><strong>„Ich hatte niemanden, der mir glaubte...“</strong> Dank der Unterstützung durch den Weißen Ring konnte ich rechtliche Hilfe bekommen und mich endlich sicher fühlen. – <em>Max, 11</em></p>
+    </div>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tAKtZNwsrTo" title="Erfahrungsbericht Weißer Ring" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="uebermich" class="section">
+    <h3>Über mich</h3>
+    <p>Ich heiße Sophia, bin 8 Jahre alt und gehe auf die Europäische Schule Saarbrücken. Ich interessiere mich für Gerechtigkeit und möchte, dass alle Kinder sicher und fröhlich aufwachsen können. Deshalb finde ich es toll, was der Weiße Ring macht.</p>
+    <img src="https://cdn.pixabay.com/photo/2017/08/06/11/01/kid-2599654_1280.jpg" alt="Illustration Kind">
+  </section>
+
+  <section id="quiz" class="section">
+    <h3>Quiz: Was weißt du über den Weißen Ring?</h3>
+    <img src="https://www.weisser-ring.de/sites/default/files/styles/media_crop/public/2020-03/Beratung.jpg" alt="Quiz Illustration">
+    <div class="quiz-question">
+      <p>1. Was macht der Weiße Ring?</p>
+      <label><input type="radio" name="q1" value="a"> Er verkauft Handys</label><br>
+      <label><input type="radio" name="q1" value="b"> Er hilft Gewaltopfern</label><br>
+      <label><input type="radio" name="q1" value="c"> Er macht Werbung</label>
+    </div>
+    <div class="quiz-question">
+      <p>2. Wie finanziert sich der Weiße Ring?</p>
+      <label><input type="radio" name="q2" value="a"> Durch Spenden</label><br>
+      <label><input type="radio" name="q2" value="b"> Durch Steuern</label><br>
+      <label><input type="radio" name="q2" value="c"> Durch Eintrittsgelder</label>
+    </div>
+    <div class="quiz-question">
+      <p>3. Wann wurde der Weiße Ring gegründet?</p>
+      <label><input type="radio" name="q3" value="a"> 2001</label><br>
+      <label><input type="radio" name="q3" value="b"> 1990</label><br>
+      <label><input type="radio" name="q3" value="c"> 1976</label>
+    </div>
+    <button onclick="checkQuiz()">Antworten überprüfen</button>
+    <div id="certificate">
+      <h3>Glückwunsch!</h3>
+      <p>Du hast alle Fragen richtig beantwortet 🎉</p>
+      <p>Hiermit bekommst du eine Urkunde für dein Wissen über den Weißen Ring!</p>
+      <a class="download-button" href="https://example.com/urkunde.pdf" target="_blank">Urkunde als PDF herunterladen</a>
+    </div>
+  </section>
+
+  <section id="spenden" class="section">
+    <h3>Unterstütze den Weißen Ring</h3>
+    <p>Jede Spende hilft, Menschen in Not beizustehen. Wenn du helfen möchtest, klicke hier:</p>
+    <a class="donate-button" href="https://weisser-ring.de/spenden" target="_blank">Jetzt spenden</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sophia – Europäische Schule Saarbrücken</p>
+  </footer>
+
+  <div id="mascot" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000; cursor: pointer;">
+    <img src="https://cdn.pixabay.com/photo/2022/04/23/20/28/bear-7152157_1280.png" alt="Maskottchen" width="100" style="animation: wave 1.5s infinite alternate;">
+  </div>
+  <div id="speech-bubble" style="display:none; position: fixed; bottom: 130px; right: 40px; background: white; border: 2px solid #00a0e3; border-radius: 12px; padding: 10px 15px; font-family: 'Comic Sans MS', cursive; font-size: 14px; color: #333; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    Ich freue mich, dass du da bist!
+  </div>
+  <audio id="mascotSound" src="https://cdn.pixabay.com/download/audio/2022/03/16/audio_e1fd5ec2e0.mp3?filename=success-1-6297.mp3"></audio>
+  <script>
+    const mascot = document.getElementById("mascot");
+    const bubble = document.getElementById("speech-bubble");
+    const sound = document.getElementById("mascotSound");
+
+    mascot.addEventListener("click", () => {
+      bubble.style.display = "block";
+      sound.currentTime = 0;
+      sound.play();
+      setTimeout(() => bubble.style.display = "none", 4000);
+    });
+  </script>
+</body>
+</html>
